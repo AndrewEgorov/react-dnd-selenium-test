@@ -2,6 +2,7 @@
   "name": "fruit-basket",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://crukorg.github.io/react-dnd-selenium-test",
   "dependencies": {
     "husky": "^0.14.3",
     "lint-staged": "^7.1.1",
@@ -17,12 +18,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css}": [
       "prettier --single-quote --write",
       "git add"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
   }
 }
