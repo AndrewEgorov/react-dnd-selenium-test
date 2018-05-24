@@ -17,6 +17,6 @@ function collect(connect, monitor) {
 }
 
 const Orange = ({ connectDragSource }) =>
-  connectDragSource(<img src={orange} alt="Orange" />);
+  connectDragSource(<img src={orange} alt="Orange" className="orange" />);
 
 export default DragSource('ORANGE', orangeSource, collect)(Orange);

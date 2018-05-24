@@ -17,6 +17,6 @@ function collect(connect, monitor) {
 }
 
 const Banana = ({ connectDragSource }) =>
-  connectDragSource(<img src={banana} alt="Banana" />);
+  connectDragSource(<img src={banana} alt="Banana" className="banana" />);
 
 export default DragSource('BANANA', bananaSource, collect)(Banana);
